@@ -1,0 +1,14 @@
+body {
+    color: #82756B;
+    
+}
+
+.header {
+    padding: 20px;
+    border-bottom: 1px solid #F4F4F4;
+}
+
+.header__ttl {
+    font-size: 30px;
+    text-align: center;
+}

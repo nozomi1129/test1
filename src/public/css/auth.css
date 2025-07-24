@@ -1,0 +1,27 @@
+body {
+    color: #82756B;
+}
+
+.header {
+    padding: 20px;
+    border-bottom: 1px solid #F4F4F4;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #fff;
+}
+
+.header__ttl {
+    font-size: 30px;
+    text-align: center;
+}
+
+.header__nav {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    padding: 5px 15px;
+    border: 1px solid #baa899;
+    background-color: rgba(209, 201, 173, 0.15);
+    font-size: 12px;
+}
