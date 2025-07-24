@@ -23,7 +23,7 @@ Laravel環境構築
 3.MySql 8.0
 
 ## ER図
-
+https://github.com/nozomi1129/test1/blob/main/er.png
 
 ## URL
 1.開発環境：http://localhost/
