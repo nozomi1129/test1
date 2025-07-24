@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # アプリケーション名
 お問い合わせフォーム
 
@@ -27,3 +28,6 @@ Laravel環境構築
 ## URL
 1.開発環境：http://localhost/
 2.PhpMyAdmin：http://localhost:8080/
+=======
+
+>>>>>>> 6b39c8381d35956fdd4bf52152ed14bcb32c2cef
