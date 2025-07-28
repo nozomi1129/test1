@@ -15,8 +15,8 @@ class AuthController extends Controller
     public function admin() {
         $contacts = Contact::all();
         $categories = Category::all();
-        $page = Contact::Paginate(7);
-        return view('admin', compact('categories', 'contacts', 'page'));
+        $contacts = Contact::Paginate(7);
+        return view('admin', compact('categories', 'contacts'));
     }
 
     public function register(UserRequest $request) {

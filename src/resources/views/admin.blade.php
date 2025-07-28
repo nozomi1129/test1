@@ -23,7 +23,16 @@
             <select class="search-gender" name="gender">
                 <option value="">性別</option>
                     @foreach ($contacts as $contact)
-                        <option value="{{ $contact['gender'] }}">{{ $contact['gender'] }}</option>
+                        <option value="{{ $contact['gender'] }}" />
+                    <?php
+                    if ($contact['gender'] == '1') {
+                        echo '男性';
+                    } elseif ($contact['gender'] == '2') {
+                        echo '女性';
+                    } else {
+                        echo 'その他';
+                    }
+                    ?></option>
                     @endforeach
             </select>
             <select class="search-cat" name="category_id">
@@ -42,9 +51,9 @@
 
     <div class="content__sub">
         <div class="export">
-            <div class="export-btn">エクスポート</div>
+            <button class="export-btn">エクスポート</button>
         </div>
-        <div class="page">{{ $page->links() }}</div>
+        <div class="page">{{ $contacts->links() }}</div>
     </div>
 
     <div class="content__ls">
@@ -56,16 +65,28 @@
                 <th>お問い合わせの種類</th>
                 <th></th>
             </tr>
+            @foreach($contacts as $contact)
             <tr class="ls-row">
-                @foreach($contacts as $contact)
                 <td>{{ $contact['first_name']}} {{ $contact['last_name'] }}</td>
-                <td>{{ $contact['gender'] }}</td>
+                <td>
+                    <input type="hidden" value="{{ $contact['gender'] }}" />
+                    <?php
+                    if ($contact['gender'] == '1') {
+                        echo '男性';
+                    } elseif ($contact['gender'] == '2') {
+                        echo '女性';
+                    } else {
+                        echo 'その他';
+                    }
+                    ?>
+                </td>
                 <td>{{ $contact['email'] }}</td>
                 <td>{{ $contact['category']['content'] }}</td>
-                <td>{{ $contact['detail'] }}</td>
-                <td>詳細</td>
-                @endforeach
+                <td class="detail-button">
+                    <button wire:click="openModal()" type="button" class="detail">詳細</button>
+                </td>
             </tr>
+            @endforeach
         </table>
     </div>
 

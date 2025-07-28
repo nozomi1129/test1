@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\Contact;
+use App\Models\Category;
 
 class ContactTableSeeder extends Seeder
 {
